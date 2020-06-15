@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{padding: 0;margin: 0}
+		body{background-image: url(../images/bg_grid.gif);}
+		.wrap{background-color:#f00;
+			  width: 200px;}
+		.box1{float: left;}
+		.box2{float: left;}
+		.clear{clear:both;}
+		.test{width: 100px;height: 100px;background-color: #f0f}
+		.after{width: 200px;height: 200px;background-color: skyblue}
+		
+		.after:after{content:"둥둥탁두두둥둥탁~!";}
+		.after:before{content:"나";}
+
+		.wrap:after{content: "뭐야이거";
+		display: block;
+		clear: both;}
+		.wrap:before{content: "이게 앞이야";
+		display: block;
+		clear: both;}
+
+
+		/*div.wrap>div.box1{width: 100px;
+			height: 100px;
+			background-color:#ff0;
+			float: left;
+		}
+		div.wrap>div.box2{width: 100px;
+			height: 100px;
+			background-color:#0ff;
+			float: left;
+			
+		}*/
+		
+		
+		
+		/*img{width: 200px;height: 200px;}*/
+	
+
+
+	</style>
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="box1">화려한</div>
+		<div class="box2">조명</div>
+		
+	</div>
+	<div class="test">이</div>
+
+	<div class="after">
+		기준
+	</div>
+</body>
+</html>

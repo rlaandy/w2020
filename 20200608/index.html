@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{margin:0; padding: 0;}
+		a:link,
+		a:visited{color:#000;text-decoration: none;}
+		li{list-style: none;
+		}
+		/*ul.list{}  우선순위가 높다 .list{} 우선순위가 낮다*/
+		ul.list>li{
+			background-color:pink;
+			width: 200px;
+			}
+		ul.list>li>a{
+			display:block; 
+			text-align: center;
+			line-height: 30px;
+		}
+		ul.list>li>a:hover{
+			background-color: orange;
+			color: #fff;
+		}
+		/*ul.list>li.blue{background-color: blue}*/
+		ul.list>li:nth-child(5){background-color: red}
+		 			/*nth-child는 순번이 있는 리스트에 사용가능*/
+		 			/*괄호()안에 2n을 쓸경우 2칸마다 효과적용*/
+		ul.list>li:first-child{background-color: yellow}
+		ul.list>li:last-child{background-color: yellow}
+										/*이렇게도 가능함↓*/
+		/*ul.list>li:first-child,ul.list>li:last-child{background-color: yellow}*/
+
+
+		.blue{background-color: gray !important;}
+					/*'!important' 태그 순위 상관없이 제일 우선 순위 적용*/
+
+		           /*우선순위 순서  * <  tag name  <  class  <  id  <  inline style  < !important*/
+
+		div.box{
+			width: 300px;
+			height: 300px;
+			background-color: gray;
+			text-align: center;
+			}
+
+		div.box:after{
+			content: "!!!";
+			color:#fff;
+
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<!-- ul.list>li*10>a[#]>{졸려염!$} -->
+	<ul class="list">
+		<li><a href="#">졸려염!1</a></li>
+		<li><a href="#">졸려염!2</a></li>
+		<li><a href="#">졸려염!3</a></li>
+		<li><a href="#">졸려염!4</a></li>
+		<li class="blue"><a href="#">졸려염!5</a></li>
+		<li><a href="#">졸려염!6</a></li>
+		<li><a href="#">졸려염!7</a></li>
+		<li><a href="#">졸려염!8</a></li>
+		<li><a href="#">졸려염!9</a></li>
+		<li><a href="#">졸려염!10</a></li>
+	</ul>
+
+
+	<div class="box">쉬는시간입니다 이제</div>
+
+
+</body>
+</html>

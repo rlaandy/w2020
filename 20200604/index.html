@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>selector</title>
+	<style>
+		/*h3{color:brown;}*/
+		/*h3,li{color:green;}*/
+		body.main{background-color:#ff0}
+		.warning{color: #f00;}
+		#list{background-color: mistyrose}
+		#list>li{color:gray;}
+		#list>li.active{color: #f00;}
+		div>strong{background-color: white}
+		/*ul>li>strong{background-color: #000}*/
+		ul strong{background-color: #00f}
+	</style>
+</head>
+<body class="main">
+	<h3>lorem ipsum dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem <strong>ipsum</strong> dolor.</div>
+		<ul id="list">
+			<li>html</li>
+			<li class="active"><strong>css</strong></li>
+			<li>javascript</li>
+		</ul>
+		<div class="warning">Lorem ipsum dolor sit.</div>
+	</div>
+</body>
+</html>

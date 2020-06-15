@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: black;text-decoration: none;}
+		li{list-style: none;}
+
+		body{background-image:url(../images/bg_grid.gif);}
+		/*wrap*/
+		div.wrap{
+			width: 400px;
+			background-color:deeppink;
+		}
+        div.wrap > div.box1{
+        	width: 200px;height: 200px;
+        	float: left;
+        	background-color:green;
+        }
+        div.wrap > div.box2{
+        	background-color:purple;
+        	width: 200px;height: 200px;
+        	float: left;
+        }
+		
+		div.box3{
+			width: 200px;height: 200px;
+			background-color:#ff0000;
+
+		}
+		div.wrap > div.clear{clear: both;}
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1">덥습니다1</div>
+		<div class="box2">덥습니다2</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="box3">box3</div>
+</body>
+</html>

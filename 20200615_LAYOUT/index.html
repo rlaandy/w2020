@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../bxslider/css/jquery.bxslider.css">
+	<script src="../bxslider/js/jquery-3.1.1.min.js"></script>
+	<script src="../bxslider/js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+		$("#slider").bxSlider({
+				auto:true
+				});
+		});
+
+	</script>
+	<style>
+		body{background-image: url(../images/bg_grid.gif);}
+		.boxWrap{width: 410px;_height: 210px;background-color: green}
+		.boxWrap .box1,.boxWrap .box2{
+			width: 200px;height: 200px;
+			color:white;
+			float: left;
+			}
+
+		.boxWrap .box1{background-color: pink;}
+		.boxWrap .box2{background-color: deeppink;}
+		.box3{height: 200px;background-color: black;color:white;}
+		.boxWrap .clear{height: 10px; clear:both;}
+
+		.clearfix {content: ""; clear: both;
+		display: block;
+		}
+		.boxWrap:after{content: ""; clear: both;display: block;}
+		.box3:after{content: "입니다."}
+		.box3:before{content: "핑트는 "}
+
+	</style>
+</head>
+<body>
+	<div class="boxWrap clearfix">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+	<div class="box3">box3</div>
+<style>
+	.red{background-color: red}
+	.pink{background-color: pink}
+	.skyblue{background-color: skyblue}
+
+
+	.wrap1{
+		width: 1000px;margin: 10px auto;
+		}
+	.wrap1 .left,
+	.wrap1 .right{width: 100px;height: 100px;}
+	.wrap1 .left{float: left;}
+	.wrap1 .right{float: right;}
+
+</style>
+
+
+<style>
+	.wrap2{width: 1000px;margin: 0 auto;}
+	.wrap2 li{float: left;
+	width: 20%;}
+	.wrap2 li>a{display: block;
+	text-align: center;
+	line-height: 30px;}
+	.wrap2 li>a:hover{background-color: blue}
+
+</style>
+
+
+	<h3>1.float</h3>
+	<div class="wrap1 red clearfix">
+		<div class="left pink">left</div>
+		<div class="right skyblue">right</div>
+	</div>
+	<h3>2. float nav</h3>
+	<div class="wrap2 red">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+
+<style>
+	.red{background-color: red}
+	.pink{background-color: pink}
+	.skyblue{background-color: skyblue}
+
+
+	.logo{text-align: center;
+          line-height: 50px;}
+    .hdWrap .hdMenu{}
+	div.hdMenu>ul{width: 1000px;margin: 0 auto;}
+    div.hdMenu>ul>li{float: left;width: 20%;background-color: pink}
+    div.hdMenu>ul>li>a{display: block;text-align: center;line-height: 30px;}
+    div.hdMenu li>a:hover{background-color: green;color:white}
+	.hdMenu{margin-bottom: 50px}
+</style>
+	<h3>3. header</h3>
+	<div class="hdWrap"> 
+		<h2 class="logo"><a href="#">LOGO</a></h2>
+      <div class="hdMenu">
+         <ul class="">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+         </ul>
+      </div>
+   </div>
+
+   <style>
+	.red{background-color: red}
+	.pink{background-color: pink}
+	.skyblue{background-color: skyblue}
+
+
+	.logo{text-align: center;
+          line-height: 50px;}
+    .hdWrap .hdMenu{}
+	div.hdMenu>ul{width: 1000px;margin: 0 auto;}
+    div.hdMenu>ul>li{float: left;width: 20%;background-color: pink}
+    div.hdMenu>ul>li>a{display: block;text-align: center;line-height: 30px;}
+    div.hdMenu li>a:hover{background-color: green;color:white}
+
+
+	#sliderWrap{width: 1200px;margin: 0 auto;left: 40px; position: relative;}
+		#slider img{width: 100%;}
+		
+
+</style>
+	<h3>4. 플로트메인페이지레이아웃</h3>
+	<div class="hdWrap"> 
+		<h2 class="logo"><a href="#">LOGO</a></h2>
+      <div class="hdMenu">
+         <ul class="">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+         </ul>
+      </div>
+   </div>
+
+   <div id="sliderWrap">
+
+		<ul id="slider">
+			<li><img src="../images/img01.jpg" alt=""></li>
+			<li><img src="../images/img02.jpg" alt=""></li>
+		</ul>
+</body>
+</html>

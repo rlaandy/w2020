@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		a:limk, a:visit{color: #000;text-decoration: none;}
+		li{list-style: none}
+
+		body{background-image: url(../images/bg_grid.gif);}
+		div.box1,div.box2,div.box3,div.box4,div.box5,div.box6{width: 100px;height: 100px;}
+		
+		div.box1{background-color: skyblue;
+				 /*position:
+				 absolute; left:20px;top:20px
+				 absolute는 자유로운 영혼이 된다
+				 relative;top:20px;left: 20px;  
+				 position:relative;를 넣어야 좌표값이 설정이 됨
+				 margin-left: 50px;margin-top: 50px;  position:relative; 를 사용할땐 마진값은 사용안하는게 좋음
+				 z-index:2;*/
+		}
+		div.box2{background-color: purple;
+				 position: absolute;top:0;
+				 left:50%; margin-left: -50px;
+				
+		}
+		div.box3{background-color: deeppink;
+			position: absolute;right: 0; top:0;}
+			
+		div.box4{background-color: red;
+			position: absolute;left: 0; bottom:0;}
+			
+		div.box5{background-color: pink;
+			position: absolute;left:50%; bottom:0; margin-left: -50px}
+			
+		div.box6{background-color: #ffb2d9;
+			position: absolute;right: 0; bottom:0;}
+						
+
+		div.boxWrap{width: 500px;height: 300px;
+					background-color:orange;
+					margin: 0 auto;
+					position: relative; /*이것이 전체 div의 박스를 가둔다*/
+		}
+
+		div.fixed{background-color: silver;
+				  position: fixed;
+				  width: 100%;height: 70px;bottom:0;
+		} /*화면에 고정시킨다 width값 height값 고정*/
+	</style>
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+		<div class="box4">box4</div>
+		<div class="box5">box5</div>
+		<div class="box6">box6</div>
+	</div>
+	<div class="fixed">fixed</div>
+</body>
+</html>

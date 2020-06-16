@@ -105,6 +105,7 @@
     div.hdMenu li>a:hover{background-color: green;color:white}
 	.hdMenu{margin-bottom: 50px}
 </style>
+	
 	<h3>3. header</h3>
 	<div class="hdWrap"> 
 		<h2 class="logo"><a href="#">LOGO</a></h2>
@@ -137,6 +138,16 @@
 	#sliderWrap{width: 1200px;margin: 0 auto;left: 40px; position: relative;}
 		#slider img{width: 100%;}
 		
+		.contentWrap{width: 1000px; height: 400px;background-color: pink;position: relative;
+			margin: 0 auto; margin-bottom: 50px
+		}
+		.contentWrap .aside{width: 400px;height: 380px;background-color: blue;position: absolute;
+			top: 10px;left: 10px; color:white; text-align: center;
+			
+		}
+		.contentWrap .content{width: 570px;height: 380px;background-color: green;position: absolute;
+		top: 10px; right: 10px;color: white;text-align: center;
+		}
 
 </style>
 	<h3>4. 플로트메인페이지레이아웃</h3>
@@ -159,5 +170,43 @@
 			<li><img src="../images/img01.jpg" alt=""></li>
 			<li><img src="../images/img02.jpg" alt=""></li>
 		</ul>
+
+		<div class="contentWrap clearfix">
+			<li class="aside">
+				aside
+			</li>
+			<li class="content">
+				content
+			</li>
+
+		</div>
+
+<style>
+	footer.footer{background-color: #5e5e5e; position: relative;}
+	.footerBottomWrap{width: 980px;margin: 0 auto;color: white;padding:20px 0; 
+	}
+	.footerBottomWrap .copy{float: left;}
+	.footer .top{
+	  	width: 40px;height: 40px;
+	  	background-color: pink;
+	  	position: absolute;right: 0;top: 0;
+		display: block;text-align: center;line-height: 30px;
+		
+	  }
+	
+	.footer .top:hover{background-color: deeppink; font-color:white}
+</style>
+
+	<footer class="footer">
+		<div class="footerBottomWrap clearfix">
+				<div class="copy">
+		    <p>Lorem ipsum.</p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+		    <p>Lorem ipsum dolor sit amet,</p>
+		    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+		  </div>
+		</div>
+		<div class="top"><a href="#">top</a></div>
+	</footer>
 </body>
 </html>

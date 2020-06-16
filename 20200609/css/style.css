@@ -146,7 +146,7 @@
       .footerTop li:first-child a{padding-left: 0;}
 	  .footerTop .top{
 	  	width: 40px;height: 40px;
-	  	background-color: orange;
+	  	background-color: red;
 	  	position: absolute;right: 0;top: 0;}
 	  .footerBottomWrap{width: 980px;margin: 0 auto;color: white;padding:20px 0; }
 	  .footerBottomWrap .logo{float: left;width: 200px;font-size:25px;font-weight: bold;padding-top: 27px}

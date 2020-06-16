@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="../css/reset.css">
+
+	<style>
+		.box{
+			width: 300px;height: 300px;
+			position: relative; overflow: hidden;}
+		.box img{display: block;}
+		.box .overlay{
+			width: 300px; height: 300px;
+			background-color:rgba(0,0,0,0.4);
+			position: absolute;
+			transition:0.6s;
+			color:white; top: 250px;
+		}
+		.box:hover .overlay{top: 0;}
+		.box .txt{text-align: center;padding-top: 10px;
+			padding-left: 20px;padding-right: 20px
+		}
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+		<div class="overlay">
+			<div class="txt">
+			Lorem ipsum.<br><br><br><br><br>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, sequi.
+
+			</div>
+		</div>
+	</div>
+
+<style>
+	.red{background-color: rgb(255,0,0,0.5);}
+	.green{background-color: rgb(0,255,0,0.5);}
+	.blue{background-color: rgb(0,0,255,0.5);}
+
+	.container{width: 1200px;margin: 0 auto;padding: 40px 0;}
+	.container h2{text-align: center;}
+	.container h2:after{
+		content: "";display: block;
+		width: 300px;height: 2px;
+		background-color: #888;margin: 10px auto;}
+
+	.container p{text-align: center;}
+	.container .hdTitle{margin-bottom: 20px}
+	.container ul.content .overlay{width: 281.25px;height: 281.25px; 
+		position: absolute;
+		transition: 0.3s;top: 300px;
+	}
+	.container ul.content li{float: left;width: 281.25px;margin-right: 25px;position: relative;
+	overflow: hidden; border-radius:0px 30px 30px 30px;  }
+
+	.content li:hover .overlay{top: 0;color: white}
+	.container ul.content li img{width: 100%;}
+	.container ul.content li:last-child{margin-right: 0;}
+
+
+	.bgOne{/*background-color: skyblue;
+		background-image: url(../images/pc01.jpg);
+		background-repeat: no-repeat;
+		background-position:center;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-attachment: fixed;*/
+
+		/*background-attachment: fixed;*/
+
+		background:#f00 url(../images/pc01.jpg) fixed
+			center no-repeat;
+			-webkit-background-size: cover;
+		background-size: cover;
+	}
+	.conWrap .hdTitle{color: white}
+</style>
+
+
+
+<div class="container">
+	<div class="hdTitle">
+		<h2>GALLERY1</h2>
+		<p>이 빌어먹을 갤러리는 볼것이 없으니 알아서 돈내고 에어컨 쐬다가 나가시란 말입니다.</p>
+	</div>
+	
+	<ul class="content clearfix">
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay red">
+				<div class="txt">이게 뭐게</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay red">
+				<div class="txt">또 속냐 세호야</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay red">
+				<div class="txt">왜 굳이 또 보냐</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay red">
+				<div class="txt">나가 이제 에어컨 끈다</div>
+			</div>
+		</li>
+
+	</ul>
+</div>
+
+<div class="conWrap bgOne">
+	<div class="container">
+		<div class="hdTitle">
+			<h2>GALLERY2</h2>
+			<p>이 빌어먹을 갤러리는 볼것이 없으니 알아서 돈내고 에어컨 쐬다가 나가시란 말입니다.</p>
+		</div>
+		
+		<ul class="content clearfix">
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay blue">
+					<div class="txt">이게 뭐게</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay blue">
+					<div class="txt">또 속냐 세호야</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay blue">
+					<div class="txt">왜 굳이 또 보냐</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay blue">
+					<div class="txt">나가 이제 에어컨 끈다</div>
+				</div>
+			</li>
+	
+		</ul>
+	</div>
+</div>
+
+<div class="container">
+	<div class="hdTitle">
+		<h2>GALLERY3</h2>
+		<p>이 빌어먹을 갤러리는 볼것이 없으니 알아서 돈내고 에어컨 쐬다가 나가시란 말입니다.</p>
+	</div>
+	
+	<ul class="content clearfix">
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay green">
+				<div class="txt">이게 뭐게</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay green">
+				<div class="txt">또 속냐 세호야</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay green">
+				<div class="txt">왜 굳이 또 보냐</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay green">
+				<div class="txt">나가 이제 에어컨 끈다</div>
+			</div>
+		</li>
+
+	</ul>
+</div>
+</body>
+</html>

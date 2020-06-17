@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="../css/reset.css">
+<style>
+	.box{
+		width: 100px;height: 100px;
+		background-color: #f00;
+		animation-name:ani;                                            /*name*/
+		animation-duration: 3s;                                        /* 움직이는 시간*/
+		animation-fill-mode: forwards;                             /*앞으로 가서 멈추기*/ /*반복X*/
+		animation-iteration-count: infinite /*무한반복*/;               /*2*/ /*두번반복*/ /*반복기능*/
+		animation-direction: alternate /*갔다오기*/;                    /*alternate-reverse*/ /*거꾸로 시작*/
+		_animation-delay: 1s ;                                          /*지연시간*/
+		_animation-timing-function: ease;                     /*쓰이긴쓰이는데 하...뭐라하지 움직이는데 지연걸리고...풀리고...*/
+		_position: absolute;
+		
+				
+	}
+	@keyframes ani{
+		/*from{width: 100px;}*/         /*시작*/ /*박스의 width가 100px*/        
+		/*to{width: 200px;}*/           /*종료위치*/
+		
+			/*↕↕↕↕둘중 하나 골라쓰면 됨↕↕↕↕↕ 더 정교한건 밑에꺼*/
+
+		0%{width: 100px;background-color: #f00;height: 100px;left: 0;}      /*시작위치*/ /*시작색깔*/ /*위치마다얇아짐*/ /*position:absolute 키면 레프트값 따라 움직임*/
+		50%{width: 300px;background-color: #0f0;height: 50px;left: 200px;}  /*중간위치*/ /*중간색깔*/ /*위치마다얇아짐*/ /*position:absolute 키면 레프트값 따라 움직임*/
+		100%{width: 500px;background-color: #00f;height: 10px;left: 300px;} /*종료위치*/ /*종료색깔*/ /*위치마다얇아짐*/ /*position:absolute 키면 레프트값 따라 움직임*/
+	}                                                   /*수업중에 이거 다 적으려니까 머리가 깨질거 같다... 공부는 잘된다...*/
+
+	.boxWrap{                                          /*f12눌러서 스카이블루 w300 h300짜리 박스에 마우스먼저 가져다 대고 봐..*/
+		width: 300px;height: 300px;
+		background-color: skyblue;position: relative;
+		
+	}
+	.line{width: 0;height: 10px;background-color: pink;
+		_animation-name:lineAni;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes lineAni{
+		from{width: 0;}
+		to{width: 100%;}
+	}
+	.line1{
+		width: 10px;height: 0;
+		;background-color: #00f;
+		position: absolute;top: 0;
+		_animation-name: lineAniOne;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+	@keyframes lineAniOne{
+		from{height: 0;}
+		to{height: 100%;}
+	}
+	
+	.line2{width: 0;height: 10px;background-color: red;
+		position: absolute;bottom: 0;right: 0;
+		_animation-name: lineAniTwo;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes lineAniTwo{
+		from{width: 0;}
+		to{width: 100%;}
+	}
+
+	.line3{width: 10px;height:0;background-color: navy;
+		position: absolute;bottom: 0;right: 0;
+		_animation-name: lineAniSam;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+	@keyframes lineAniSam{
+		from{height: 0}
+		to{height: 100%;}
+	}
+	.boxWrap:hover .line{animation-name:lineAni;}
+	.boxWrap:hover .line1{animation-name:lineAniOne;}
+	.boxWrap:hover .line2{animation-name:lineAniTwo;}
+	.boxWrap:hover .line3{animation-name:lineAniSam;}
+
+</style>
+
+</head>
+<body>
+	<div class="box"></div>
+
+	<div class="boxWrap">
+		<div class="line"></div>
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+	</div>
+</body>
+</html>

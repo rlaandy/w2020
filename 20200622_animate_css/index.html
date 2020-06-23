@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate_css</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<style>
+		
+		.box{width: 500px;height: 130px;
+			/*background: skyblue;*/animation-iteration-count: infinite;
+			/*position: absolute;
+			top: 50%;margin-top: -56px;
+			left: 50%;margin-left: -250px;*/
+			text-align: center;
+			
+		}
+
+		.gap{height: 2000px;}
+		.wrap{padding:50px 0;}
+		.container{width: 1000px;margin: 0 auto;}
+		.container ul li{
+			float: left;margin-right: 25px;
+			width: 231.25px;height: 231.25px;
+			background: orange;border-radius: 10PX 0 10px 0;
+		}
+		.container ul li:last-child{margin-right: 0;}
+
+		.gray{background: #ddd;}
+		.cycle{border-radius: 120px !important;}
+	</style>
+</head>
+<body>
+	<div class="box animated heartBeat"><h1>왜 아직도 나는 이런 바보 같은 짓을 하는지 <br>
+		머리론 알겠는데 가슴은 왜 그대로인지</h1>
+	</div>
+
+	<div class="gap"></div>
+
+	<div class="wrap gray">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="cycle wow bounce" data-wow-delay="0"	>Lorem1</li>
+				<li class="cycle wow bounce" data-wow-delay="0.3s">lorem2</li>
+				<li class="cycle wow bounce" data-wow-delay="0.6s">lorem3</li>
+				<li class="cycle wow bounce" data-wow-delay="0.9s">lorem4</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wrap">
+		<div class="container">
+			<ul class="clearfix">
+				<li class=" wow zoomIn" data-wow-delay="0">Lorem1</li>
+				<li class="cycle wow zoomOut" data-wow-delay="0.3s">lorem2</li>
+				<li class="cycle wow zoomIn" data-wow-delay="0.6s">lorem3</li>
+				<li class=" wow zoomOut" data-wow-delay="0s">lorem4</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wrap gray">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="cycle wow jello" data-wow-delay="0">Lorem1</li>
+				<li class="wow jello" data-wow-delay="0.3s">lorem2</li>
+				<li class="cycle wow jello" data-wow-delay="0.6s">lorem3</li>
+				<li class="wow jello" data-wow-delay="0.9s">lorem4</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wrap">
+		<div class="container">
+			<ul class="clearfix">
+				<li class=" wow wobble" data-wow-delay="0">Lorem1</li>
+				<li class=" wow wobble" data-wow-delay="0.2s">lorem2</li>
+				<li class=" wow wobble" data-wow-delay="0.5s">lorem3</li>
+				<li class=" wow wobble" data-wow-delay="0.7s">lorem4</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

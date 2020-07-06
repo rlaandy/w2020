@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.btn{width: 200px;height: 40px;position: relative;
+		}
+		.btn>a{display: block;
+		text-align: center;
+		line-height: 40px;}
+		.btn>.bar{position: absolute;width: 0;height: 5px;background: #f00;bottom: 0;}
+		.btn:hover .bar{width: 100%;transition:0.3s;}
+
+		.right{right: 0;}
+	</style>
+</head>
+<body>
+
+	<div class="btn">
+		<a href="#">BUTTON</a>
+		<div class="bar"></div>
+	</div>
+	<div class="btn">
+		<a href="#">BUTTON</a>
+		<div class="bar right"></div>
+	</div>
+
+	
+<style>
+	.btn1{width: 200px;height: 40px;position: relative;}
+	.btn1>a{display: block;
+	line-height: 40px;text-align: center;
+	}
+	.btn1>.bar1,.btn1>.bar2{position: absolute;height: 5px;background: #E8D9FF;
+		width: 100%;transform: scaleX(0);transition: 0.3s;
+	}
+	.btn1>.bar1{bottom: 0;}
+	.btn1>.bar1{top: 0;}
+	.btn1:hover .bar1{transform: scaleX(1);}
+	.btn1:hover .bar2{transform: scaleX(1);}
+</style>
+	<div class="btn1">
+		<a href="#">BUTTON</a>
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+	</div>
+</body>
+</html>

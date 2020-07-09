@@ -1,0 +1,22 @@
+@charset "utf-8";
+.topNav{background-color: #E8D9FF;}
+.topNav a{display:block;color: hotpink;float: left;padding: 14px 16px;margin: 5px;}
+.topNav a.icon{float: right;}
+
+@media screen and (max-width: 576px){  /*mobile*/
+	.menuWrap{position: fixed;width: 100%;}
+	.topNav a:{display: none;}
+	.topNav a:first-child{display: block;}
+	.topNav a.icon{display: block;}
+	.topNav.responsive a{float:none;display: block;}
+	.topNav.responsive a.icon{position: absolute;top: 0;right: 0;}
+}
+
+@media screen and (min-width: 577px) and (max-width: 922px){      /*tablet*/
+	.menuWrap{width: 100%;}
+}
+
+@media screen and (min-width: 923px){              /*pc*/
+	.menuWrap{width: 1200px;position: fixed;
+		left: 50%;transform: translateX(-50%);top: 20px;}
+}

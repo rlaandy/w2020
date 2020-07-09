@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>func01</title>
+	<script>
+		function gugudan(x){
+			// var x=2;
+			// document.write(x + " x 1 = " + 2*1 + "<br>");
+			// document.write(x + " x 2 = " + 2*2 + "<br>");
+			// document.write(x + " x 3 = " + 2*3 + "<br>");
+			// document.write(x + " x 4 = " + 2*4 + "<br>");
+			// document.write(x + " x 5 = " + 2*5 + "<br>");
+			// document.write(x + " x 6 = " + 2*6 + "<br>");
+			// document.write(x + " x 7 = " + 2*7 + "<br>");
+			// document.write(x + " x 8 = " + 2*8 + "<br>");
+			// document.write(x + " x 9 = " + 2*9 + "<br>");
+
+			for(var i=1;i<=9;i++){
+				document.write(x + " x " + i + " = " + x*i + "<br>")
+			}
+		}
+
+
+		var result;
+		function add(x,y){
+			var sum = 0;
+			sum = x * y;
+			//document.write(sum);
+			return sum;
+		}
+	</script>
+	<style>
+		.box{}
+	</style>
+</head>
+<body>
+	<!-- <div class="box">
+		<script>
+			gugudan(2);
+		</script>
+	</div> -->
+	<button type="button" onclick="gugudan(5)">구구구구구</button>
+	<div onclick="gugudan(4)">구구구구</div>
+	<a href="#" onclick="gugudan(2)">구구</a><br>
+	<a href="javascript:gugudan(3)">구구구</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<script>
+		result = add(60,20);
+		document.write("곱한값은 " + result + "입니다")
+	</script>
+</body>
+</html>

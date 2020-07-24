@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script>
+		var pTag;
+		function init(){
+	
+			pTag = document.getElementById("newP");
+	
+			pTag.onmouseover = function(){
+				pTag.style.background = "orchid";
+			};
+			// pTag.onmouseout = out;
+			// pTag.addEventListener("이벤트명",함수이름);
+			pTag.addEventListener("mouseout",out);
+	
+		}
+	
+		function out(){
+				pTag.style.background = "white";
+		}
+	</script>
+</head>
+<body onload="init()">  <!-- 문서를 읽고 나서 init를 실행 -->
+	<p id="newP">
+		풋 온 더 마우스 맨!!!!!!
+	</p>
+
+	
+</body>
+</html>

@@ -18,6 +18,8 @@
 		}
 		#car{position: absolute;left: 50px;top: 120px;}
 		.rotate{transform: rotateY(180deg);}
+
+
 	</style>
 	<script>
 		$(document).ready(function(){
@@ -27,23 +29,40 @@
 			var nEnd = nStart + objBar.width() - objCar.width();
 			var nStep = 2;
 			var nCurrent = nStart;
+			var nTimerId = 0;
+
 
 			function carMove(){
-				// nCurrent = nCurrent + nStep;
-				nCurrent+=nStep;
-				if (nCurrent > nEnd){
+				nCurrent = nCurrent + nStep;
+				
+				if(nCurrent>nEnd){
 					nStep = -2;
 					objCar.addClass("rotate");
 				}
-				if (nCurrent < nStart){
-					nStep = 2;
-					objCar.removeClass("rotate");
+				if(nCurrent<nStart){
+					nStep=2;
+					objCar.removeClass("rotate")
 				}
 				objCar.css("left",nCurrent);
+
 			}
 
-			setInterval(carMove,30);
+			// setInterval(carMove,10);
+			
+			$(".btn_start").click(function(){
+				if(nTimerId == 0){
+				nTimerId=setInterval(carMove,30);
+				alert("부릉부릉");
+			}
+			});
+			$(".btn_stop").click(function(){
+				if(nTimerId != 0){
+				clearInterval(nTimerId);
+				nTimerId = 0;
+			}	
+			});
 		});
+
 	</script>
 </head>
 <body>
@@ -51,6 +70,7 @@
 		<div class="bar"></div>
 		<div id="car"><img src="../../images/car.png" alt=""></div>
 	</div>
-	
+	<button class="btn_start">출발</button>
+	<button class="btn_stop">정지</button>
 </body>
 </html>

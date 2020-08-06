@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		html,body{height: 100%;} /*브라우저크기만큼*/
+		.scene{
+			width: 100%;height: 100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+			position: relative;
+		}
+		.scene.one{background-image: url(../../images/bg01.jpg);}
+		.scene.two{background-image: url(../../images/bg02.jpg);}
+		.scene.three{background-image: url(../../images/bg03.jpg);}
+
+		.scene div{
+			width: 400px;position: absolute;
+			left: 50%;top: 50%;transform: translate(-50%,-50%);
+			color: white;text-align: center;
+		}
+		.scene div h2{
+			font-size: 3em;
+		}
+		.scene div h2:after{
+			content: "";width: 100%;height: 2px;
+			background: #ffffff;display: block;
+			margin: 10px auto;
+		}
+		nav.menu{
+			position: fixed;
+			width: 100%;height: 40px;
+			background: #DAD9FF;z-index:1;
+			padding-left: 40px;
+		}
+		nav.menu a{display: inline-block;line-height: 40px;}
+		nav.menu{}
+	</style>
+	<script>
+		$(function(){
+			// var oneTop = $("#l_01").offset().top;
+			// var twoTop = $("#l_02").offset().top;
+			// var threeTop = $("#l_03").offset().top;
+
+			// $(".menu > a").eq(0).click(function(){
+			// 	$("html,body").animate({scrollTop:oneTop},500);
+			// });
+			// $(".menu > a").eq(1).click(function(){
+			// 	$("html,body").animate({scrollTop:twoTop},500);
+			// });
+			// $(".menu > a").eq(2).click(function(){
+			// 	$("html,body").animate({scrollTop:threeTop},500);
+			// });
+
+			$(".menu > a").click(function(){
+				var i = $(this).index();
+				var st = $(".scene").eq(i).offset().top;
+				$("html,body").animate({scrollTop:st},300);
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="menu">
+		<a href="#l_01">menu1</a>
+		<a href="#l_02">menu2</a>
+		<a href="#l_03">menu3</a>
+	</nav>
+	<section class="scene one" id="l_01">
+		<!-- div>(h2>lorem5)+(p>lorem20) -->
+		<!-- div>h2>lorem5^p>lorem20 -->
+		<div>
+			<h2>Lorem ipsum dolor sit amet.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, cumque, consectetur. Nobis doloribus delectus excepturi esse et praesentium atque molestias!</p>
+		</div>
+	</section>
+	<section class="scene two" id="l_02">
+		<div>
+			<h2>Lorem ipsum dolor sit amet.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda architecto voluptate illum nemo alias incidunt cum reprehenderit, molestiae odit in.</p>
+		</div>
+	</section>
+	<section class="scene three" id="l_03">
+		<div>
+			<h2>Lorem ipsum dolor sit amet.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quae asperiores quo et sint expedita tempore, eligendi explicabo praesentium beatae?</p>
+		</div>
+	</section>
+</body>
+</html>

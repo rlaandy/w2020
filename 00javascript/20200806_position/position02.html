@@ -56,11 +56,20 @@
 			// 	$("html,body").animate({scrollTop:threeTop},500);
 			// });
 
-			$(".menu > a").click(function(){
-				var i = $(this).index();
-				var st = $(".scene").eq(i).offset().top;
-				$("html,body").animate({scrollTop:st},300);
-			});
+			menuClick();
+			function menuClick(){
+				$(".menu > a").click(function(){
+					var i = $(this).index();
+					var st = $(".scene").eq(i).offset().top;
+					$("html,body").animate({scrollTop:st},300);
+				});
+			}
+			$(window).resize(function(){
+				$("html,body").stop().animate({scrollTop:0},500)
+				menuClick();
+				
+				});
+			
 		});
 	</script>
 </head>

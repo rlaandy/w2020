@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+	<style>
+		.section{width: 1200px;margin: 0 auto;padding: 0 100px;}
+
+		.section .section_title{
+			float: left;width: 200px;
+		}
+		.section .section_title h3{
+			font-size: 20px;color: #333;
+			margin-bottom: 10px;
+		}
+		.section .section_title a.more_btn{
+			display: block;width: 23px;height: 23px;
+			background-image: url(images/more_btn.png);
+			background-repeat: no-repeat;
+			background-position: 0 -23px;
+			text-indent: -9999px;									
+			transition: 0.5s;
+		}
+		.section .section_title a.more_btn:hover{
+			background-position: 0 0;
+		}
+
+
+		.section .section_content{
+			float: right;width: 800px;
+		}
+
+
+		.news_list li{
+			float: left;
+			width: 266px;border-right: 1px solid #dddedf;
+			padding: 0 30px;
+		}
+		.news_list li:last-child{
+			border-right: none;
+		}
+		.news_list h4{
+			margin-bottom: 30px;
+			font-size: 18px;color: #56565e;
+			font-weight: initial;
+		}
+		.news_list span.date{color: #979797;font-size: 14px;float: right;
+		}
+
+	</style>
+	<div class="section">
+		<div class="section_title">
+			<h3><a>니유우쓰~</a></h3>
+			<a href="#" class="more_btn">more</a>
+		</div>
+		<div class="section_content">
+			<!-- ul.news_list>li*3>a[#]>h4.news_title>lorem10^span.date>{2020-08-13} -->
+			<ul class="news_list">
+				<li>
+					<a href="#">
+						<h4 class="news_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, temporibus!</h4>
+						<span class="date">2020-08-13</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h4 class="news_title">Ab voluptatibus neque rerum quo atque est veniam eius odit.</h4>
+						<span class="date">2020-08-13</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h4 class="news_title">Laborum doloremque laboriosam fugit adipisci esse debitis? Voluptatem nobis, atque.</h4>
+						<span class="date">2020-08-13</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

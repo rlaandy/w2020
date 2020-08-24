@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call back</title>
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			$("button").click(function(){
+				$("p").hide("slow",function(){alert("버튼이 눌러졌네요. 사라집니다ㅎㅎㅎ 뿅!")});
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>hide</button>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, numquam!</p>
+</body>
+</html>

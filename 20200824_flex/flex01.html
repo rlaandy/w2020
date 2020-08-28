@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrapper{
+			width: 100vw;height: 100px;
+			background: skyblue;
+			display: flex;
+			justify-content: space-between; /*사이벌리기*/
+			/*align-items:flex-start;*/ /*위로 정렬*/
+			/*align-items:flex-end;*/ /*밑으로 정렬*/
+			margin-bottom: 20px;
+		}
+		.wrapper div{width: 100px;height: 100px;}
+		div.box1{background:  indigo;width: 50px;}
+		div.box2{background: #FFB2D9;}
+		div.box3{background: #FFC19E;}
+		div.box4{background: #B2CCFF;}
+		div.box5{background: #B7F0B1;}
+	</style>
+</head>
+<body>
+	<!-- <div class="wrapper">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">5</div>
+	</div> -->
+
+	<style>
+		.flex{
+			width: 100vw;height: 200px;
+			display: flex;
+			background: magenta;
+		}
+		.flex div{
+			flex:1;
+			display: flex;
+			justify-content: center; /*width 중앙*/
+			align-items: center; /*height 중앙*/
+			transition: 0.5s;
+		}
+		div.cell1{background:  indigo;}
+		div.cell2{background: #FFB2D9;}
+		div.cell3{background: #FFC19E;}
+		div.cell4{background: #B2CCFF;}
+		div.cell5{background: #B7F0B1;}
+
+		.flex div:hover{flex:3;}
+	</style>
+	<div class="flex">
+		<div class="cell1">1</div>
+		<div class="cell2">2</div>
+		<div class="cell3">3</div>
+		<div class="cell4">4</div>
+		<div class="cell5">5</div>
+	</div>
+
+	<style>
+
+		.divwrap{background: #ddd;padding-top: 20px;}
+		.divwrap>h2{text-align: center;}
+		.container{
+			width: 1000px;margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 0;
+		}
+		.container div{
+			width:240px;border: 1px solid #000;
+			padding: 20px;
+		}
+		.container div h2{margin-bottom: 10px;}
+		.container div p{font-size: 14px}
+	</style>
+
+
+	<div class="divwrap">
+		<h2>title</h2>
+		<div class="container"> 
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, nostrum.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, nostrum.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, nostrum.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, nostrum.</p>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		.nav{
+			width: 100vw;background: magenta;
+		}
+		.nav ul{
+			width: 1000px;margin: 0 auto;
+			display: flex;
+			height: 40px;
+		}
+		.nav ul li{
+			flex:1;background: green;
+			text-align: center;
+		}
+		.nav a{display: block;line-height: 40px;}
+	</style>
+	<div class="nav">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+		</ul>
+	</div>
+</body>
+</html>
